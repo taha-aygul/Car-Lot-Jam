@@ -1,0 +1,1063 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &417311697867441243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119597000587234539}
+  m_Layer: 0
+  m_Name: MANAGERS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1119597000587234539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417311697867441243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.454191, y: 0.05801022, z: -9.178912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9213146783754925913}
+  - {fileID: 9213146784836123126}
+  - {fileID: 9213146784558674999}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9213146783754925915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9213146783754925913}
+  - component: {fileID: 9213146783754925912}
+  m_Layer: 0
+  m_Name: 'LEVELGENERATOR '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9213146783754925913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146783754925915}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.454191, y: -0.05801022, z: 9.178912}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1119597000587234539}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9213146783754925912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146783754925915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444f395b62c92a148a63620a9dc2a4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelData: {fileID: 11400000, guid: 84e1fdcd32c053b4a9409fd37a881dcd, type: 2}
+  cellGameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  finishPoint: {x: 0, y: 0.1, z: 36}
+  exitPoint: {x: 0, y: 0}
+  cells:
+  - cellColor: {r: 1, g: 1, b: 1, a: 1}
+    cellValue: E
+    cellBasePrefab: {fileID: 919132149155446097, guid: e586a96bd162a134db314244a94cef5b,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: 0}
+    cellIndex: {x: 0, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 3.6, y: 0.1, z: 0}
+    cellIndex: {x: 1, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 7.2, y: 0.1, z: 0}
+    cellIndex: {x: 2, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 10.799999, y: 0.1, z: 0}
+    cellIndex: {x: 3, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 14.4, y: 0.1, z: 0}
+    cellIndex: {x: 4, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 18, y: 0.1, z: 0}
+    cellIndex: {x: 5, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 0d0fa0a8bf3142e429e316da1cbe3f79,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: 0}
+    cellIndex: {x: 6, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: -3.6}
+    cellIndex: {x: 0, y: 1}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 3.6, y: 0, z: -3.6}
+    cellIndex: {x: 1, y: 1}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 7.2, y: 0, z: -3.6}
+    cellIndex: {x: 2, y: 1}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    cellValue: H
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 10.799999, y: 0, z: -3.6}
+    cellIndex: {x: 3, y: 1}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 14.4, y: 0, z: -3.6}
+    cellIndex: {x: 4, y: 1}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 18, y: 0, z: -3.6}
+    cellIndex: {x: 5, y: 1}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: -3.6}
+    cellIndex: {x: 6, y: 1}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: -7.2}
+    cellIndex: {x: 0, y: 2}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 3.6, y: 0, z: -7.2}
+    cellIndex: {x: 1, y: 2}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0, b: 1, a: 1}
+    cellValue: C2F
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 7.2, y: 0, z: -7.2}
+    cellIndex: {x: 2, y: 2}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0, b: 0, a: 1}
+    cellValue: C2R
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 10.799999, y: 0, z: -7.2}
+    cellIndex: {x: 3, y: 2}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0, b: 0, a: 1}
+    cellValue: C2F
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 14.4, y: 0, z: -7.2}
+    cellIndex: {x: 4, y: 2}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 18, y: 0, z: -7.2}
+    cellIndex: {x: 5, y: 2}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: -7.2}
+    cellIndex: {x: 6, y: 2}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: -10.799999}
+    cellIndex: {x: 0, y: 3}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 3.6, y: 0, z: -10.799999}
+    cellIndex: {x: 1, y: 3}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0, b: 1, a: 1}
+    cellValue: C2R
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 7.2, y: 0, z: -10.799999}
+    cellIndex: {x: 2, y: 3}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 10.799999, y: 0, z: -10.799999}
+    cellIndex: {x: 3, y: 3}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0, b: 1, a: 1}
+    cellValue: H
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 14.4, y: 0, z: -10.799999}
+    cellIndex: {x: 4, y: 3}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 18, y: 0, z: -10.799999}
+    cellIndex: {x: 5, y: 3}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: -10.799999}
+    cellIndex: {x: 6, y: 3}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: -14.4}
+    cellIndex: {x: 0, y: 4}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 3.6, y: 0, z: -14.4}
+    cellIndex: {x: 1, y: 4}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0, b: 0, a: 1}
+    cellValue: H
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 7.2, y: 0, z: -14.4}
+    cellIndex: {x: 2, y: 4}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    cellValue: C2F
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 10.799999, y: 0, z: -14.4}
+    cellIndex: {x: 3, y: 4}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    cellValue: C2R
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 14.4, y: 0, z: -14.4}
+    cellIndex: {x: 4, y: 4}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.3950596, g: 0.9056604, b: 0.14866497, a: 1}
+    cellValue: C
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 18, y: 0, z: -14.4}
+    cellIndex: {x: 5, y: 4}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: -14.4}
+    cellIndex: {x: 6, y: 4}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: -18}
+    cellIndex: {x: 0, y: 5}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 3.6, y: 0, z: -18}
+    cellIndex: {x: 1, y: 5}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.3950596, g: 0.9056604, b: 0.14866497, a: 1}
+    cellValue: C
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 7.2, y: 0, z: -18}
+    cellIndex: {x: 2, y: 5}
+    selectable: 1
+    occupied: 1
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 10.799999, y: 0, z: -18}
+    cellIndex: {x: 3, y: 5}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 14.4, y: 0, z: -18}
+    cellIndex: {x: 4, y: 5}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    cellValue: x
+    cellBasePrefab: {fileID: 6415551036898461426, guid: 5cfd5b24967d72b45b36e8ac4fda9a45,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 18, y: 0, z: -18}
+    cellIndex: {x: 5, y: 5}
+    selectable: 1
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: -18}
+    cellIndex: {x: 6, y: 5}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 0d0fa0a8bf3142e429e316da1cbe3f79,
+      type: 3}
+    cellRotation: {x: 0, y: 270, z: 0}
+    cellPosition: {x: 0, y: 0.1, z: -21.6}
+    cellIndex: {x: 0, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 3.6, y: 0.1, z: -21.6}
+    cellIndex: {x: 1, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 7.2, y: 0.1, z: -21.6}
+    cellIndex: {x: 2, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 10.799999, y: 0.1, z: -21.6}
+    cellIndex: {x: 3, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 14.4, y: 0.1, z: -21.6}
+    cellIndex: {x: 4, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    cellRotation: {x: 0, y: 90, z: 0}
+    cellPosition: {x: 18, y: 0.1, z: -21.6}
+    cellIndex: {x: 5, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  - cellColor: {r: 0, g: 1, b: 1, a: 1}
+    cellValue: R
+    cellBasePrefab: {fileID: 919132149155446097, guid: 0d0fa0a8bf3142e429e316da1cbe3f79,
+      type: 3}
+    cellRotation: {x: 0, y: 180, z: 0}
+    cellPosition: {x: 21.6, y: 0.1, z: -21.6}
+    cellIndex: {x: 6, y: 6}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+  objDatas:
+  - objectPrefab: {fileID: 919132149155446097, guid: 67dd635475eccc448812ddfca6906b02,
+      type: 3}
+    objectColor: {r: 0.3950596, g: 0.9056604, b: 0.14866497, a: 1}
+    objectMaterial: {fileID: 0}
+    objectDirection: 0
+    occupiedCellsIndexes:
+    - {x: 5, y: 4}
+  - objectPrefab: {fileID: 919132149155446097, guid: 67dd635475eccc448812ddfca6906b02,
+      type: 3}
+    objectColor: {r: 0.3950596, g: 0.9056604, b: 0.14866497, a: 1}
+    objectMaterial: {fileID: 0}
+    objectDirection: 0
+    occupiedCellsIndexes:
+    - {x: 2, y: 5}
+  - objectPrefab: {fileID: 2147092131650048002, guid: 41d1b0a33e57b9040a646327ba1d2c65,
+      type: 3}
+    objectColor: {r: 1, g: 0, b: 0, a: 1}
+    objectMaterial: {fileID: 2100000, guid: e9238052d8b175d44954f0bd70835111, type: 2}
+    objectDirection: 0
+    occupiedCellsIndexes:
+    - {x: 2, y: 4}
+  - objectPrefab: {fileID: 7106758484840024443, guid: 43e0590b82142ef49a95b3af49b38cef,
+      type: 3}
+    objectColor: {r: 1, g: 0, b: 0, a: 1}
+    objectMaterial: {fileID: 2100000, guid: 853cc905a298d2444ae2a903c0c41e65, type: 2}
+    objectDirection: 2
+    occupiedCellsIndexes:
+    - {x: 4, y: 2}
+    - {x: 3, y: 2}
+  - objectPrefab: {fileID: 7106758484840024443, guid: 43e0590b82142ef49a95b3af49b38cef,
+      type: 3}
+    objectColor: {r: 1, g: 0, b: 1, a: 1}
+    objectMaterial: {fileID: 2100000, guid: cc27a1ef2d0b037479d7c1d426c75ab1, type: 2}
+    objectDirection: 3
+    occupiedCellsIndexes:
+    - {x: 2, y: 2}
+    - {x: 2, y: 3}
+  - objectPrefab: {fileID: 2147092131650048002, guid: 41d1b0a33e57b9040a646327ba1d2c65,
+      type: 3}
+    objectColor: {r: 1, g: 0, b: 1, a: 1}
+    objectMaterial: {fileID: 2100000, guid: 49232bb19b58262479ea3a8f09e24b26, type: 2}
+    objectDirection: 0
+    occupiedCellsIndexes:
+    - {x: 4, y: 3}
+  - objectPrefab: {fileID: 7106758484840024443, guid: 43e0590b82142ef49a95b3af49b38cef,
+      type: 3}
+    objectColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    objectMaterial: {fileID: 2100000, guid: aa25c07a7f003d64aaff64e7cc62ecc4, type: 2}
+    objectDirection: 1
+    occupiedCellsIndexes:
+    - {x: 3, y: 4}
+    - {x: 4, y: 4}
+  - objectPrefab: {fileID: 2147092131650048002, guid: 41d1b0a33e57b9040a646327ba1d2c65,
+      type: 3}
+    objectColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    objectMaterial: {fileID: 2100000, guid: 0d5f9e5fadd45814d873800ddafed5a8, type: 2}
+    objectDirection: 0
+    occupiedCellsIndexes:
+    - {x: 3, y: 1}
+  normalCam: {fileID: 0}
+  topOrthographicCameras: {fileID: 0}
+  cameraChangeTresholdSizeY: 6
+  carCount: 3
+--- !u!1 &9213146784558674994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9213146784558674999}
+  - component: {fileID: 9213146784558674992}
+  - component: {fileID: 9213146784558674993}
+  - component: {fileID: 9213146784558674998}
+  - component: {fileID: 9213146784558674997}
+  m_Layer: 0
+  m_Name: GENERAL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9213146784558674999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784558674994}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 217.65054, y: 1204.1182, z: 285.7125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1119597000587234539}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9213146784558674992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784558674994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263fab5a5f43c284a8752f42e6fd0ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9213146784558674993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784558674994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65687ffbec07d034b8725f7a1cbc44ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelSuccesfulUI: {fileID: 0}
+  coinText: {fileID: 0}
+  coinTextLevelSuccesful: {fileID: 0}
+  levelText: {fileID: 0}
+--- !u!114 &9213146784558674998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784558674994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ea298fad1c8394ca3a662d9648e9b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9213146784558674997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784558674994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e086f7d62a62241acda3a8433612bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinGainedThisRound: 0
+--- !u!1 &9213146784836123120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9213146784836123126}
+  - component: {fileID: 9213146784836123125}
+  - component: {fileID: 9213146784836123124}
+  m_Layer: 0
+  m_Name: HUMAN MOVEMENT MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9213146784836123126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784836123120}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.559721, y: -22.007961, z: 73.41124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1119597000587234539}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9213146784836123125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784836123120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4fe5cd77df1d849a1942f8a42486ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 3
+  cellColorTime: 0.3
+  selectedHuman: {fileID: 0}
+  selectedCell: {fileID: 0}
+  selectedCar: {fileID: 0}
+  selectedHumanData:
+    objectPrefab: {fileID: 0}
+    objectColor: {r: 0, g: 0, b: 0, a: 0}
+    objectMaterial: {fileID: 0}
+    objectDirection: 0
+    occupiedCellsIndexes: []
+  targetCell:
+    cellColor: {r: 0, g: 0, b: 0, a: 0}
+    cellValue: 
+    cellBasePrefab: {fileID: 0}
+    cellRotation: {x: 0, y: 0, z: 0}
+    cellPosition: {x: 0, y: 0, z: 0}
+    cellIndex: {x: 0, y: 0}
+    selectable: 0
+    occupied: 0
+    objectOnIt:
+      objectPrefab: {fileID: 0}
+      objectColor: {r: 0, g: 0, b: 0, a: 0}
+      objectMaterial: {fileID: 0}
+      objectDirection: 0
+      occupiedCellsIndexes: []
+--- !u!114 &9213146784836123124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213146784836123120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b586370e373df774a8ecef4053166083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

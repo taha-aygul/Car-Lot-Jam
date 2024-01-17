@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14226e8f5a6159949b0e48f42e96884f, type: 3}
+  m_Name: EmptyGridGround 1
+  m_EditorClassIdentifier: 
+  datas:
+  - displayName: Empty Grid
+    groundPrefab: {fileID: 919132149155446097, guid: e97dadee5a7a39244b067a46bcb0b404,
+      type: 3}
+    spawnObjectPrefab: {fileID: 0}
+  - displayName: Road  Straight
+    groundPrefab: {fileID: 919132149155446097, guid: 16379fd09765bdd4da6948095700550d,
+      type: 3}
+    spawnObjectPrefab: {fileID: 0}
+  - displayName: Road  Turning
+    groundPrefab: {fileID: 919132149155446097, guid: 0d0fa0a8bf3142e429e316da1cbe3f79,
+      type: 3}
+    spawnObjectPrefab: {fileID: 0}

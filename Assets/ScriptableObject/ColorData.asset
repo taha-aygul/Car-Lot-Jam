@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3fbf302cf88564496bb01f1e4cde5a, type: 3}
+  m_Name: ColorData
+  m_EditorClassIdentifier: 
+  colorOption:
+  - displayName: Black
+    humanMaterial: {fileID: 2100000, guid: 46e24cb06f1b5264c9a0626bd981c84a, type: 2}
+    carMaterial: {fileID: 2100000, guid: 58341ba3fd0248446aa8895ec28e937f, type: 2}
+  - displayName: Blue
+    humanMaterial: {fileID: 2100000, guid: 087936d1b85be3043b77d07c3a6c96b2, type: 2}
+    carMaterial: {fileID: 2100000, guid: 5f88cad514afbd845a64af93cbffdea4, type: 2}
+  - displayName: Green
+    humanMaterial: {fileID: 2100000, guid: d83fdb47207c0aa47a10eac34e4fc3fd, type: 2}
+    carMaterial: {fileID: 2100000, guid: c545dccb987c11d4ca6fd032897f5078, type: 2}
+  - displayName: Orange
+    humanMaterial: {fileID: 2100000, guid: e96e1f32cd09b3040ae0a1fe5ebd71bd, type: 2}
+    carMaterial: {fileID: 2100000, guid: be400573ce298b14ab394ecdab78ebb6, type: 2}
+  - displayName: Pink
+    humanMaterial: {fileID: 2100000, guid: e258db85f9d641f4f85e8caf5aaafe74, type: 2}
+    carMaterial: {fileID: 2100000, guid: bd6247034c16542429e2d5ff65452e78, type: 2}
+  - displayName: Purple
+    humanMaterial: {fileID: 2100000, guid: 49232bb19b58262479ea3a8f09e24b26, type: 2}
+    carMaterial: {fileID: 2100000, guid: cc27a1ef2d0b037479d7c1d426c75ab1, type: 2}
+  - displayName: Red
+    humanMaterial: {fileID: 2100000, guid: e9238052d8b175d44954f0bd70835111, type: 2}
+    carMaterial: {fileID: 2100000, guid: 853cc905a298d2444ae2a903c0c41e65, type: 2}
+  - displayName: Yellow
+    humanMaterial: {fileID: 2100000, guid: 0d5f9e5fadd45814d873800ddafed5a8, type: 2}
+    carMaterial: {fileID: 2100000, guid: aa25c07a7f003d64aaff64e7cc62ecc4, type: 2}
