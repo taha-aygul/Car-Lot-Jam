@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
 {
 
     [SerializeField] public LevelData levelData;
-    [SerializeField] List<GameObject> cellGameObjects;
+    [SerializeField] List<GameObject> objectsOnCell, cellGameObjects;
     public Vector3 finishPoint;
     public Vector2Int exitPoint;
     GameObject levelParent;
@@ -48,7 +48,7 @@ public class LevelGenerator : MonoBehaviour
 
         carCount = levelData.carCount;
         cells = new CellData[levelData.cells_1d.Length];
-
+        cellGameObjects = new List<GameObject>();
         cells = levelData.cells_1d;
 
 
@@ -66,6 +66,7 @@ public class LevelGenerator : MonoBehaviour
                 cellGO.transform.position = cells[index].cellPosition; //spawnPosition;
                 cellGO.transform.eulerAngles = cells[index].cellRotation;
                 cellGO.name = "x." + x + " y." + y + " , index." + index;
+                cellGameObjects.Add(cellGO);
             }
         }
 
@@ -285,7 +286,7 @@ public class LevelGenerator : MonoBehaviour
 
             newGO.transform.position = spawnPos;
             newGO.transform.eulerAngles = spawnRot;
-            cellGameObjects.Add(newGO);
+            objectsOnCell.Add(newGO);
         }
     }
     private Vector3 CalculateAveragePosition(List<Vector3> pos)
@@ -300,7 +301,7 @@ public class LevelGenerator : MonoBehaviour
 
     public void DeleteLevel()
     {
-        cellGameObjects.Clear();
+        objectsOnCell.Clear();
         GameObject.DestroyImmediate(GameObject.Find("Level"));
         if (levelParent != null)
         {
@@ -323,14 +324,14 @@ public class LevelGenerator : MonoBehaviour
 
     public GameObject GetGameObject(Vector2Int coordinate)
     {
-        for (int i = 0; i < cellGameObjects.Count; i++)
+        for (int i = 0; i < objectsOnCell.Count; i++)
         {
-            Vector2Int[] occCell = cellGameObjects[i].GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes;
+            Vector2Int[] occCell = objectsOnCell[i].GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes;
             for (int j = 0; j < occCell.Length; j++)
             {
                 if (coordinate == occCell[j])
                 {
-                    return cellGameObjects[i];
+                    return objectsOnCell[i];
                 }
             }
         }
@@ -343,6 +344,10 @@ public class LevelGenerator : MonoBehaviour
     public CellData GetCellData(Vector2Int index)
     {
         return cells[(index.y * levelData.gridX) + index.x];
+    }
+    public GameObject GetCellGameObject(Vector2Int index)
+    {
+        return cellGameObjects[(index.y * levelData.gridX) + index.x];
     }
     public void OccupyCell(int x, int y)
     {

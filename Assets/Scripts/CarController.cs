@@ -65,6 +65,11 @@ public class CarController : MonoBehaviour
     }
     public IEnumerator GetHuman(Tween tween)
     {
+        LevelGenerator.Instance.DeOccupyCell(selectedHuman.GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes[0]);
+        for (int i = 0; i < selectedHuman.GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes.Length; i++)
+        {
+            selectedHuman.GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes[i] = Vector2Int.zero;
+        }
         // Wait until human completes its move
         yield return tween.WaitForCompletion();
 
@@ -94,12 +99,7 @@ public class CarController : MonoBehaviour
         seq.Join(selectedHuman.transform.DOScale(Vector3.one * 0.1f, 1.5f));
         seq.Play();
 
-        // Deoccupy human's occupied cells
-        LevelGenerator.Instance.DeOccupyCell(selectedHuman.GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes[0]);
-        for (int i = 0; i < selectedHuman.GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes.Length; i++)
-        {
-            selectedHuman.GetComponent<GridObjectConnection>().myData.occupiedCellsIndexes[i] = Vector2Int.zero;
-        }
+       
     }
 
     private void InitializeFrontAndBackCells()
@@ -201,7 +201,7 @@ public class CarController : MonoBehaviour
             path = pathfinder.CalculatePath(frontCells[frontCells.Count - 1], LevelGenerator.Instance.levelData.exitCoordinate, true);
 
             // Initialize total path
-            totalPath = new Vector3[frontCells.Count + path.Length];
+            totalPath = new Vector3[frontCells.Count + path.Length+1];
 
             // Get path positions
             for (int i = 0; i < frontCells.Count; i++)
@@ -213,6 +213,7 @@ public class CarController : MonoBehaviour
                 totalPath[frontCells.Count + i] = LevelGenerator.Instance.GetCellData(path[i].cellIndex).cellPosition;
             }
 
+            totalPath[totalPath.Length - 1] = LevelGenerator.Instance.finishPoint;
             float arrivalTime = totalPath.Length / velocity;
             float exitTime = 20 / exitCarVelocity;
 
@@ -221,20 +222,15 @@ public class CarController : MonoBehaviour
             {
                 LevelGenerator.Instance.DeOccupyCell(myData.occupiedCellsIndexes[i]);
             }
+
             var seq = DOTween.Sequence();
             seq.Append(transform.DOPath(totalPath, arrivalTime, PathType.Linear, PathMode.Full3D, 10, Color.black)
                .SetEase(Ease.Linear)
                .OnWaypointChange(OnWaypointReached));
-            seq.InsertCallback(arrivalTime, () => ExitBarrierController.Instance.OpenExitBarrier());
-            seq.AppendInterval(1.0f);
-            seq.InsertCallback(arrivalTime + 1, () => emoji.Play());
-            seq.Append(transform.DOMove(LevelGenerator.Instance.finishPoint, exitTime));
-            seq.Join(transform.DOLookAt(LevelGenerator.Instance.finishPoint, 0.5f));
-            seq.InsertCallback(arrivalTime + 4, () => LevelGenerator.Instance.CarLeftParkingLot());
+           
+            /*seq.Append(transform.DOLookAt(LevelGenerator.Instance.finishPoint, 0.4f));
+            seq.Join(transform.DOMove(LevelGenerator.Instance.finishPoint, exitTime));*/
             seq.Play();
-
-
-
         }
         else if (isPathAvaliable(backCells))
         {
@@ -246,7 +242,7 @@ public class CarController : MonoBehaviour
             path = pathfinder.CalculatePath(backCells[backCells.Count - 1], LevelGenerator.Instance.levelData.exitCoordinate, true);
             
             // Initialize total path
-            totalPath = new Vector3[backCells.Count + path.Length + 2];
+            totalPath = new Vector3[backCells.Count + path.Length + 3];
 
             // Get path positions
             if (frontCells.Count > 1)
@@ -282,7 +278,8 @@ public class CarController : MonoBehaviour
             {
                 LevelGenerator.Instance.DeOccupyCell(myData.occupiedCellsIndexes[i]);
             }
-            
+            totalPath[totalPath.Length - 1] = LevelGenerator.Instance.finishPoint;
+
             // Dotween that moves the car 
 
             var seq = DOTween.Sequence();
@@ -290,29 +287,28 @@ public class CarController : MonoBehaviour
                .SetEase(Ease.Linear)
                .SetOptions(AxisConstraint.Y)
                .OnWaypointChange(OnWaypointReachedReverse));
-            seq.InsertCallback(arrivalTime, () => ExitBarrierController.Instance.OpenExitBarrier());
-            seq.AppendInterval(1.0f);
-            seq.InsertCallback(arrivalTime + 1, () => emoji.Play());
-            seq.Append(transform.DOMove(LevelGenerator.Instance.finishPoint, exitTime).SetEase(Ease.Linear));
-            seq.Join(transform.DOLookAt(LevelGenerator.Instance.finishPoint, 0.5f));
-            seq.InsertCallback(arrivalTime + 4, () => LevelGenerator.Instance.CarLeftParkingLot());
+           
+           /* seq.Join(transform.DOLookAt(LevelGenerator.Instance.finishPoint, 0.5f));
+            seq.Append(transform.DOMove(LevelGenerator.Instance.finishPoint, exitTime).SetEase(Ease.Linear));*/
             seq.Play();
 
         }
     }
-
-
-
 
     void OnWaypointReached(int waypointIndex)
     {
         if (waypointIndex < totalPath.Length)
         {
             Vector3 lookAtPosition = totalPath[waypointIndex];
-            transform.DOLookAt(lookAtPosition, 0.5f);
+            transform.DOLookAt(lookAtPosition, 0.4f);
         }
-
-        if (waypointIndex == frontCells.Count)
+        if (waypointIndex == totalPath.Length-2)
+        {
+            LevelGenerator.Instance.CarLeftParkingLot();
+            ExitBarrierController.Instance.OpenExitBarrier();
+            emoji.Play();
+        }
+        if (waypointIndex == 1)//frontCells.Count)
         {
             for (int i = 0; i < myData.occupiedCellsIndexes.Length; i++)
             {
@@ -330,11 +326,16 @@ public class CarController : MonoBehaviour
                 lookAtPosition = totalPath[waypointIndex - 1];
             }
             lookAtPosition.y = transform.position.y;
-            transform.DOLookAt(lookAtPosition, 0.3f);
+            transform.DOLookAt(lookAtPosition, 0.4f);
         }
 
-
-        if (waypointIndex == backCells.Count)
+        if (waypointIndex == totalPath.Length - 2)
+        {
+            LevelGenerator.Instance.CarLeftParkingLot();
+            ExitBarrierController.Instance.OpenExitBarrier();
+            emoji.Play();
+        }
+        if (waypointIndex == 1)//backCells.Count)
         {
             for (int i = 0; i < myData.occupiedCellsIndexes.Length; i++)
             {

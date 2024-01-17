@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationToForward: {fileID: 0}
-  velocity: 2
+  velocity: 1.3
   exitCarVelocity: 4
   leftEnterPoint: {x: -2, y: 0, z: 2}
   rightEnterPoint: {x: 2, y: 0, z: 2}
@@ -88,6 +88,7 @@ MonoBehaviour:
   emoji: {fileID: 1342086253276186534}
   outline: {fileID: 5793896114493809931}
   carController: {fileID: 6722550908347798704}
+  carState: 0
 --- !u!65 &6462263979896442153
 BoxCollider:
   m_ObjectHideFlags: 0

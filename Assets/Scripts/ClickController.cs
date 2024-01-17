@@ -153,6 +153,8 @@ public class ClickController : MonoBehaviour
         selectedHuman = null;
         selectedHumanData = null;
         targetCell = null;
+        humanController.SetBool("isSelected", false);
+
     }
 
     private void SelectHuman(GameObject human)
@@ -160,6 +162,7 @@ public class ClickController : MonoBehaviour
         selectedHuman = human;
         selectedHuman.GetComponent<HumanEmojiController>().outline.OutlineColor = Color.green;
         humanController = selectedHuman.GetComponent<Animator>();
+        humanController.SetBool("isSelected", true);
         selectedHumanData = human.GetComponent<GridObjectConnection>().myData;
     }
 
@@ -178,7 +181,6 @@ public class ClickController : MonoBehaviour
         if (path != null)
         {
             // Succesful move effects
-            selectedHuman.GetComponent<HumanEmojiController>().happy.Play();
             if (moveType == 0)
             {
                 StartCoroutine(PaintCellGreen(selectedCell));
@@ -224,6 +226,7 @@ public class ClickController : MonoBehaviour
             // Move to the car
             if (moveType == 1)
             {
+                selectedHuman.GetComponent<HumanEmojiController>().happy.Play();
                 selectedCar.GetComponent<CarController>().GetHumanData(selectedHuman, isSelectedDoorLeft, humanController);
                 selectedCar.GetComponent<CarController>().EnterHuman(runTween);
             }
@@ -235,12 +238,8 @@ public class ClickController : MonoBehaviour
             // Human cannot move to selected pos
             selectedHuman.GetComponent<HumanEmojiController>().angry.Play();
             DeselectHuman();
-
-            if (moveType == 0)
-            {
-                StartCoroutine(PaintCellRed(selectedCell));
-            }
-            else
+            StartCoroutine(PaintCellRed(selectedCell));
+            if (moveType == 1)
             {
                 selectedCar.GetComponent<CarController>().outline.OutlineColor = Color.clear;
             }
@@ -335,7 +334,12 @@ public class ClickController : MonoBehaviour
                 }
                 else
                 {
+                    selectedHuman.GetComponent<HumanEmojiController>().angry.Play();
+                    DeselectHuman();
+                    selectedCell = levelGenerator.GetCellGameObject(leftDoorCell);
+                    StartCoroutine(PaintCellRed(selectedCell));
                     selectedCar.GetComponent<CarController>().outline.OutlineColor = Color.clear;
+                    return;
                 }
             }
             else
@@ -354,21 +358,39 @@ public class ClickController : MonoBehaviour
                 }
                 else
                 {
+                    selectedHuman.GetComponent<HumanEmojiController>().angry.Play();
+                    DeselectHuman();
+                    selectedCell = levelGenerator.GetCellGameObject(rightDoorCell);
+                    StartCoroutine(PaintCellRed(selectedCell));
                     selectedCar.GetComponent<CarController>().outline.OutlineColor = Color.clear;
-
+                    return;
                 }
 
             }
 
             // Start to move human
+            selectedCell = levelGenerator.GetCellGameObject(targetCell);
+           
 
             StartCoroutine(MoveHuman(levelGenerator.GetCellData(targetCell.x, targetCell.y), 1));
 
         }
         else
         {
+            selectedHuman.GetComponent<HumanEmojiController>().angry.Play();
+            DeselectHuman();
+            StartCoroutine(PaintCarRed());
             selectedCar = null;
         }
+
+    }
+
+    private IEnumerator PaintCarRed()
+    {
+        selectedCar.GetComponent<CarController>().outline.OutlineColor = Color.red;
+        GameObject car = selectedCar;
+        yield return new WaitForSeconds(2);
+        car.GetComponent<CarController>().outline.OutlineColor = Color.clear;
 
     }
 

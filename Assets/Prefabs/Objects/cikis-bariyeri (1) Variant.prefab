@@ -101,4 +101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {x: 0, y: 0, z: 60}
-  sec: 2
+  sec: 0.5

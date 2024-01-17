@@ -409,10 +409,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationToForward: {fileID: 0}
-  velocity: 2
+  velocity: 1.3
   exitCarVelocity: 0
   leftEnterPoint: {x: -2, y: 0, z: 2}
   rightEnterPoint: {x: 2, y: 0, z: 2}
   smokeParticle: {fileID: 4011327993551069288}
   smokeTrail: {fileID: 816518000113676038}
+  seatPos: {fileID: 0}
+  emoji: {fileID: 0}
+  outline: {fileID: 0}
   carController: {fileID: 8773329986598413782}
+  carState: 0

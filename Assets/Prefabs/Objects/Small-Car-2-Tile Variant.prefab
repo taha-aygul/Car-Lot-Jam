@@ -549,8 +549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationToForward: {fileID: 7634291973547498658}
-  velocity: 2
-  exitCarVelocity: 4
+  velocity: 1.3
+  exitCarVelocity: 3
   leftEnterPoint: {x: -3.65, y: 0, z: -1.89}
   rightEnterPoint: {x: 3.35, y: 0, z: -1.68}
   smokeParticle: {fileID: 5331475494091952827}
@@ -559,6 +559,7 @@ MonoBehaviour:
   emoji: {fileID: 2134607325642506538}
   outline: {fileID: 6693078945454987666}
   carController: {fileID: 1269300392098295433}
+  carState: 0
 --- !u!4 &7632360693199688641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e7bc47562696197479db01cd32ae417f,
